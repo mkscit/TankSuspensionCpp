@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"G:/UE Projects/TankSuspension/.vscode": true,
+		"G:/UE Projects/TankSuspension/Content": true,
+		"G:/UE Projects/TankSuspension/Intermediate": true
+	}
+}

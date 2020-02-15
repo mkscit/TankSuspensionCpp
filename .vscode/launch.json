@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "TankSuspension (Debug)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspension Win64 Debug Build",
+			"program": "G:\\UE Projects\\TankSuspension\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspension (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspension Win64 DebugGame Build",
+			"program": "G:\\UE Projects\\TankSuspension\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspension (Development)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspension Win64 Development Build",
+			"program": "G:\\UE Projects\\TankSuspension\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspension (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspension Win64 Shipping Build",
+			"program": "G:\\UE Projects\\TankSuspension\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspension (Test)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspension Win64 Test Build",
+			"program": "G:\\UE Projects\\TankSuspension\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspensionEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspensionEditor Win64 Debug Build",
+			"program": "G:\\Epic System installed\\UE_4.23\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"G:\\UE Projects\\TankSuspension\\TankSuspension.uproject"
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspensionEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspensionEditor Win64 DebugGame Build",
+			"program": "G:\\Epic System installed\\UE_4.23\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"G:\\UE Projects\\TankSuspension\\TankSuspension.uproject"
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "TankSuspensionEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "TankSuspensionEditor Win64 Development Build",
+			"program": "G:\\Epic System installed\\UE_4.23\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"G:\\UE Projects\\TankSuspension\\TankSuspension.uproject"
+			],
+			"cwd": "G:\\Epic System installed\\UE_4.23",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "G:\\Epic System installed\\UE_4.23\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "G:\\Epic System installed\\UE_4.23\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"G:\\UE Projects\\TankSuspension\\TankSuspension.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "G:\\Epic System installed\\UE_4.23"
+		}
+	]
+}
