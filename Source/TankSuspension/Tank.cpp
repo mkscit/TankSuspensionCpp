@@ -32,3 +32,33 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void ATank::Setup(UStaticMeshComponent* RightTrack, UStaticMeshComponent* LeftTrack, UStaticMeshComponent* Body)
+{
+	this->RightTrack = RightTrack;
+	this->LeftTrack = LeftTrack;
+	this->Body = Body;
+}
+
+void  ATank::Move(float Throttle)
+{
+	FVector Force = Throttle * GetWorld()->GetDeltaSeconds() * Body->GetMass() * Acceleration * Body->GetForwardVector();
+	FVector ForceAtTrack = Force / 2;
+
+	FVector RightTrackLocation = RightTrack->GetSocketLocation("Right Track");
+	FVector LeftTrackLocation = LeftTrack->GetSocketLocation("Left Track");
+
+	Body->AddForceAtLocation(ForceAtTrack, RightTrackLocation);
+	Body->AddForceAtLocation(ForceAtTrack, LeftTrackLocation);
+}
+
+void  ATank::Turn(float Throttle)
+{
+	FVector Force = Throttle * GetWorld()->GetDeltaSeconds() * Body->GetMass() * Acceleration * Body->GetForwardVector();
+	FVector ForceAtTrack = Force / 2;
+
+	FVector RightTrackLocation = RightTrack->GetSocketLocation("Right Track");
+	FVector LeftTrackLocation = LeftTrack->GetSocketLocation("Left Track");
+
+	Body->AddForceAtLocation(ForceAtTrack, RightTrackLocation);
+	Body->AddForceAtLocation(-ForceAtTrack, LeftTrackLocation);
+}

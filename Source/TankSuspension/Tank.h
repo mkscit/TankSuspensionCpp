@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
+#include "Components/StaticMeshComponent.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
@@ -26,8 +27,21 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-public:
-	UFUNCTION(BlueprintCallable, Category="Setup")
-	void Setup(UStaticMeshComponent* RightTrack, UStaticMeshComponent* LeftTrack);
+	UFUNCTION(BlueprintCallable, Category="Tank Setup")
+	void Setup(UStaticMeshComponent* RightTrack, UStaticMeshComponent* LeftTrack, UStaticMeshComponent* Body);
 
+	UFUNCTION(BlueprintCallable, Category="Tank Movement")
+	void Move(float Throttle);
+
+	UFUNCTION(BlueprintCallable, Category="Tank Movement")
+	void Turn(float Throttle);
+
+private:
+
+	UStaticMeshComponent* RightTrack = nullptr;
+	UStaticMeshComponent* LeftTrack = nullptr;
+	UStaticMeshComponent* Body = nullptr;
+
+	UPROPERTY(EditAnywhere, Category="Tank Setup")
+	float Acceleration = 1000;
 };
